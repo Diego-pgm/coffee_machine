@@ -1,4 +1,5 @@
 from resources import resources
+from functions import check_resources
 
 test_drink = {
     "water": 300,
@@ -7,7 +8,5 @@ test_drink = {
 }
 
 def test_resources():
-    for item in test_drink:
-        assert resources[item] >= test_drink[item]
+    assert check_resources(test_drink) == True
     
-test_resources()

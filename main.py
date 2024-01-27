@@ -39,4 +39,4 @@ while is_on:
 
     else:
         if check_resources(drink['ingredients']):
-            print(f'resources sufficient')
+            print('resources sufficient')

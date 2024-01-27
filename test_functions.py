@@ -9,4 +9,3 @@ test_drink = {
 
 def test_resources():
     assert check_resources(test_drink) == True
-    

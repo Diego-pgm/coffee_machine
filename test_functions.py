@@ -7,12 +7,14 @@ test_drink = {
     "coffee": 100
 }
 
+drink2 = {
+    "water": 0,
+    "milk": 0,
+    "coffee": 0
+}
+
 def test_noresources():
-    global resources
-    resources['water'] = 0
-    resources['milk'] = 0
-    resources['coffee'] = 0
-    assert check_resources(test_drink) == False
+    assert check_resources(drink2) == False
 
 def test_resources():
     assert check_resources(test_drink) == True

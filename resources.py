@@ -1,4 +1,3 @@
-
 earnings = 0
 resources = {
     "water": 1000,

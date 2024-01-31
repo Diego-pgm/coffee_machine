@@ -5,6 +5,7 @@ def report():
     print(f"Water: {resources['water']}")
     print(f"Milk: {resources['milk']}")
     print(f"Coffee: {resources['coffee']}")
+    return True
     
 def check_resources(drink_ingredients):
     for item in drink_ingredients:

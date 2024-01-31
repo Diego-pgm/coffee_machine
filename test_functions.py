@@ -1,5 +1,5 @@
 from resources import resources
-from functions import check_resources
+from functions import check_resources, report
 
 test_drink = {
     "water": 300,

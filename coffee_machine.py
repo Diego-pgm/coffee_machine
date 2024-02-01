@@ -1,13 +1,13 @@
 from menu import menu
 from resources import resources, earnings
-from functions import check_resources, report
+from functions import check_resources, report, check_transaction
 
-print('-----------Menu--------------')
-for item in menu:
-    print(item)
 
 is_on = True
 while is_on:
+    print('-----------Menu--------------')
+    for item in menu:
+        print(item)
     user_input = input('What would you like? ')
     
     if user_input == "off":
@@ -19,4 +19,5 @@ while is_on:
     else:
         drink = menu[user_input]
         if check_resources(drink['ingredients']):
-            print('resources sufficient')
+            if check_transaction(drink):
+                print('Transaction successfull')

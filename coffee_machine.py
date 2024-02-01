@@ -18,6 +18,5 @@ while is_on:
 
     else:
         drink = menu[user_input]
-        if check_resources(drink['ingredients']):
-            if check_transaction(drink):
-                print('Transaction successfull')
+        if check_resources(drink['ingredients']) and check_transaction(drink):
+            print('Transaction successfull')

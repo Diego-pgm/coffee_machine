@@ -24,7 +24,7 @@ def check_transaction(drink):
         global earnings
         change = round(coins_inserted - drink['cost'], 2)
         print(f'Drink Cost: {drink["cost"]}')
-        print(f'Coins inserted: {coins_inserted}')
+        print(f'Coins inserted: {round(coins_inserted,2)}')
         earnings += round(coins_inserted - change, 2)
         print(f'Here you have: {change}! Thank you!')
         return True

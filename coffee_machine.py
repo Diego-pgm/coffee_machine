@@ -1,6 +1,6 @@
 from menu import menu
 from resources import resources, earnings
-from functions import check_resources, report, check_transaction
+from functions import check_resources, report, check_transaction, make_coffee
 
 
 is_on = True
@@ -19,4 +19,5 @@ while is_on:
     else:
         drink = menu[user_input]
         if check_resources(drink['ingredients']) and check_transaction(drink):
+            make_coffee(drink['ingredients'])
             print('Transaction successfull')

@@ -20,6 +20,7 @@ menu = {
             "water": 0,
             "milk": 200,
             "coffee": 25
-        }
+        },
+        "cost": 2.75
     }
 }

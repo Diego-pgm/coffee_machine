@@ -22,8 +22,16 @@ def check_transaction(drink):
         return False
     else:
         global earnings
-        earnings = round(coins_inserted, 2)
+        change = round(coins_inserted - drink['cost'], 2)
+        print(f'Drink Cost: {drink["cost"]}')
+        print(f'Coins inserted: {coins_inserted}')
+        earnings += round(coins_inserted - change, 2)
+        print(f'Here you have: {change}! Thank you!')
         return True
+
+def make_coffee(drink_ingredients):
+    for item in drink_ingredients:
+        resources[item] -= drink_ingredients[item]
 
 def process_coins():
     coins = int(input("How many quarters (25)? ")) * 0.25 
